@@ -63,11 +63,11 @@ namespace App_Dev101_Project
             }
             else
             {
-                //Ads = Rate * 0.05;
-                Ads = 5000;
+                Ads = 0;
+
             }
 
-            Payments P = new Payments();
+            Payments P = new Payments(Rate,Hours,Ads);
             lblEmployee.Text = "Employee: " + Name + " " + Surname + " " + WorkID + ".";
             lblPosition.Text ="Position: "+Position;
             lblBranch.Text = "Working: " + "at the" + " " + Branch + " " + "Branch.";

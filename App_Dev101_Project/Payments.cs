@@ -12,9 +12,23 @@ namespace App_Dev101_Project
         public double Hours { get; set; }
         public string Position{ get; set; }
         public double  Ads{ get; set; }
-   
-    
-        
+
+        public Payments()
+        {
+            Rate = 0.0;
+            Hours = 0.0;
+            Position = "";
+            Ads = 0.0;
+        }
+
+        //Overloaded Constructor
+        public Payments(double rate, double hours, double ads)
+        {
+            Rate = rate;
+            Hours = hours;
+            Ads = ads;
+        }
+
 
         //Methods
         public double WeeklypayWithNoDeductions()
