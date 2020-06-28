@@ -35,6 +35,7 @@ namespace App_Dev101_Project
             Rate = double.Parse(TxtRate.Text);
             Hours = double.Parse(TxtHours.Text);
             Position = cmbPosition.SelectedItem.ToString();
+            
 
             if(Position == "chief Construction Officer")
             {
@@ -62,11 +63,12 @@ namespace App_Dev101_Project
             }
             else
             {
-                Ads = Rate * 0.05;
+                //Ads = Rate * 0.05;
+                Ads = 5000;
             }
 
             Payments P = new Payments();
-            lblEmployee.Text = "Employee: " + Name + " " + Surname + "(" + WorkID + ").";
+            lblEmployee.Text = "Employee: " + Name + " " + Surname + " " + WorkID + ".";
             lblPosition.Text ="Position: "+Position;
             lblBranch.Text = "Working: " + "at the" + " " + Branch + " " + "Branch.";
             lblEarned.Text = "Earned: " + " " + P.WeeklypayWithNoDeductions().ToString("C")+" "+"this week.";
